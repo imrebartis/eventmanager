@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended : false }));
 
 //Serve static files
-app.use(express.static(path.join(_dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 //Set our api routes
 // app.use('/api', api);
