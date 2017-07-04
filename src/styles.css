@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+ul {
+    list-style-type: none;
+}
+body{
+    font-family: 'Cabin', sans-serif;
+}
+
+button {
+    font-family: 'Cabin', sans-serif;
+}
+
+h1,h3,h4 {
+    font-family: 'Cabin', sans-serif;
+}
+
+.list-title {
+    font-weight: bolder;
+    font-size: 3.5rem;
+}
+.center-title {
+    text-align: center;
+}
+
+.icon-bar {
+    background: #53868B; /*aqua color*/
+}
+.about-text-align {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+.about-text-spacing {
+    margin-bottom: 0px;
+}
