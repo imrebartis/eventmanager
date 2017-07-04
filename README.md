@@ -1,5 +1,7 @@
 # Eventmanager
 
+A web application that allows people to register to events, see who is participating and see where the events happen.
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
 ## Development server
