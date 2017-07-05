@@ -9,13 +9,13 @@
             <!-- NAME FIELD -->
             <div class="row">
                 <div class="small-12 columns" *ngFor="let event of events">
-                    <h4 routerLink="/" class="event-name">Event name: {{ event.name }}</h4>
+                    <h4 class="event-name">Event name: {{ event.name }}</h4>
                 </div>
             </div>
             <!-- EDIT & DELETE BUTTONS -->
             <div class="row">
                 <div class="small-2 columns">
-                    <a (click)="getEventId()" class="button tiny">Edit Event</a>
+                    <a routerLink="/" class="button tiny">Edit Event</a>
                 </div>
                 <div class="small-10 columns">
                     <a href="#" (click)="events.$remove(event)" class="button tiny alert">Delete Event</a>
@@ -24,7 +24,7 @@
             <!-- VIEW DETAILS BUTTON -->
             <div class="row">
                 <div class="small-12 columns">
-                    <a routerLink="/" (click)="showDetails = ! showDetails">View details</a>
+                    <a routerLink="/">View details</a>
                 </div>
             </div>
     </li>

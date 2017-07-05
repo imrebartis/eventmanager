@@ -26,4 +26,16 @@ router.get('/events', function(req, res) {
         });
 });
 
+router.get('/details/:id', function(req, res) {
+    console.log('Requesting event');
+    event.findById(req.params.id)
+        .exec(function(err, event) {
+            if (err) {
+                console.log('Error getting the event');
+            } else {
+                res.json(event);
+            }
+        });
+});
+
  module.exports = router;

@@ -11,7 +11,10 @@ export class HomeComponent implements OnInit {
 
   events: Array<Event>;
 
-  constructor(private _eventService: EventService) { }
+  constructor(
+    private _eventService: EventService
+
+  ) { }
 
   ngOnInit() {
     this._eventService.getEvents()
