@@ -6,10 +6,10 @@
     <ul>
         <li>
             <hr>
-            <!-- TITLE FIELD -->
+            <!-- NAME FIELD -->
             <div class="row">
-                <div class="small-12 columns" >
-                    <h4 routerLink="/details/{{ event._id }}" class="event-title">{{ event.title }}</h4>
+                <div class="small-12 columns" *ngFor="let event of events">
+                    <h4 routerLink="/" class="event-name">Event name: {{ event.name }}</h4>
                 </div>
             </div>
             <!-- EDIT & DELETE BUTTONS -->
@@ -24,7 +24,7 @@
             <!-- VIEW DETAILS BUTTON -->
             <div class="row">
                 <div class="small-12 columns">
-                    <a href="" (click)="showDetails = ! showDetails">view details</a>
+                    <a routerLink="/" (click)="showDetails = ! showDetails">View details</a>
                 </div>
             </div>
     </li>
