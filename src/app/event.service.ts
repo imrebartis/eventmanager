@@ -3,6 +3,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map'; //helps us transform our result from the api into json data
+import { Event } from './event';
 
 @Injectable()
 export class EventService {
