@@ -5,7 +5,7 @@
   </div>
 
   <form [formGroup]="eventForm" (ngSubmit)="addEvent(eventForm.value)">
-    <div class="row">
+    <div class="row columns">
       <div class="columns small-12 medium-6">
         <label>Name of event
           <input type="text" name="name" [formControl]="eventForm.controls['name']">
@@ -13,13 +13,13 @@
         <div class="alert" *ngIf="!eventForm.controls['name'].valid && eventForm.controls['name'].touched">You must specify a name.</div>
       </div>
       <div class="columns small-12 medium-6">
-        <label>Date
+        <label>Date (yy-mm-dd)
           <input type="text" name="date" [formControl]="eventForm.controls['date']">
         </label>
         <div class="alert" *ngIf="!eventForm.controls['date'].valid && eventForm.controls['date'].touched">You must specify a date.</div>
       </div>
     </div>
-      <div class="row columns">
+      <div class="columns">
         <label>Details
           <textarea name="details" id="details" [formControl]="eventForm.controls['details']"></textarea>
         </label>
