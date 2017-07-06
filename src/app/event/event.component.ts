@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   templateUrl: './event.component.html',
   styleUrls: ['./event.component.css']
 })
+
 export class EventComponent implements OnInit {
 
   events: Array<Event>;

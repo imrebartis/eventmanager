@@ -1,4 +1,11 @@
 <div *ngIf="event">
+  <!-- NAME FIELD -->
+  <div class="row">
+      <div class="small-4 columns">
+          Name: {{ event.name }}
+      </div>
+  </div>
+
   <!-- DATE FIELD -->
   <div class="row">
       <div class="small-4 columns">
@@ -12,7 +19,7 @@
         Details: {{event.details}}
     </div>
   </div>
-  <!-- CATEGORY - CREATED/UPDATED FIELDS -->
+  <!-- LOCATION FIELD -->
   <div class="row">
       <div class="small-3 columns">
           Location: {{event.location}}
