@@ -24,10 +24,22 @@
           <textarea name="details" id="details" [formControl]="eventForm.controls['details']"></textarea>
         </label>
         <div class="alert" *ngIf="!eventForm.controls['details'].valid && eventForm.controls['details'].touched">You must specify details.</div>
-        <label>Location
-          <textarea name="location" id="location" [formControl]="eventForm.controls['location']"></textarea>
-        </label>
-        <div class="alert" *ngIf="!eventForm.controls['location'].valid && eventForm.controls['location'].touched">You must specify location.</div>
+        <div>
+          <label>Select existing location</label>
+          <div>
+            <div>
+                <div *ngFor="let event of events">
+                  <p><input id="existinglocation" type="radio" formControlName="location" value="{{event.location}}"> {{event.location}}</p><br>
+            </div>
+            </div>
+          </div>
+      </div>
+      <label>Create a new location
+        <textarea name="location" id="location" [formControl]="eventForm.controls['location']"></textarea>
+      </label>
+      <div class="alert" *ngIf="!eventForm.controls['location'].valid && eventForm.controls['location'].touched && !eventForm.controls['existinglocation']">You must specify location.</div>
+
+
         <input type="submit" class="cta-btn filled" value="Add event" [disabled]="!eventForm.valid">
       </div>
   </form>
