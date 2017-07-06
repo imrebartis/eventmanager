@@ -3,12 +3,12 @@
 </div>
 
 <form>
-    <ul>
+    <ul *ngFor="let event of events">
         <li>
             <hr>
             <!-- NAME FIELD -->
             <div class="row">
-                <div class="small-12 columns" *ngFor="let event of events">
+                <div class="small-12 columns">
                     <h4 class="event-name">Event name: {{ event.name }}</h4>
                 </div>
             </div>
@@ -24,7 +24,7 @@
             <!-- VIEW DETAILS BUTTON -->
             <div class="row">
                 <div class="small-12 columns">
-                    <a routerLink="/">View details</a>
+                    <a routerLink="/details/{{ event._id }}">View details</a>
                 </div>
             </div>
     </li>

@@ -38,4 +38,20 @@ router.get('/details/:id', function(req, res) {
         });
 });
 
+router.post('/events', function(req, res) {
+    console.log('Posting an event');
+    var newEvent = new event();
+    newEvent.name = req.body.name;
+    newEvent.location = req.body.location;
+    newEvent.details = req.body.details;
+    newEvent.date = req.body.date;
+    newPost.save(function(err, addedEvent) {
+        if (err) {
+            console.log('Error inserting the event');
+        } else {
+            res.json(addedEvent);
+        }
+    });
+});
+
  module.exports = router;
