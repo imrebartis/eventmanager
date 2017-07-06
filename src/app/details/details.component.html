@@ -1,3 +1,21 @@
-<p>
-  details works!
-</p>
+<div *ngIf="event">
+  <!-- DATE FIELD -->
+  <div class="row">
+      <div class="small-4 columns">
+          Date: {{ event.date }}
+      </div>
+  </div>
+
+  <!-- DETAILS FIELD -->
+  <div class="row">
+    <div class="small-3 columns">
+        Details: {{event.details}}
+    </div>
+  </div>
+  <!-- CATEGORY - CREATED/UPDATED FIELDS -->
+  <div class="row">
+      <div class="small-3 columns">
+          Location: {{event.location}}
+      </div>
+  </div>
+</div>
