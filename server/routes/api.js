@@ -26,4 +26,32 @@ router.get('/events', function(req, res) {
         });
 });
 
+router.get('/details/:id', function(req, res) {
+    console.log('Requesting event');
+    event.findById(req.params.id)
+        .exec(function(err, event) {
+            if (err) {
+                console.log('Error getting the event');
+            } else {
+                res.json(event);
+            }
+        });
+});
+
+router.post('/events', function(req, res) {
+    console.log('Posting an event');
+    var newEvent = new event();
+    newEvent.name = req.body.name;
+    newEvent.location = req.body.location;
+    newEvent.details = req.body.details;
+    newEvent.date = req.body.date;
+    newPost.save(function(err, addedEvent) {
+        if (err) {
+            console.log('Error inserting the event');
+        } else {
+            res.json(addedEvent);
+        }
+    });
+});
+
  module.exports = router;
