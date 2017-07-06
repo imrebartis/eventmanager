@@ -24,7 +24,7 @@
           <textarea name="details" id="details" [formControl]="eventForm.controls['details']"></textarea>
         </label>
         <div class="alert" *ngIf="!eventForm.controls['details'].valid && eventForm.controls['details'].touched">You must specify details that are at least 500 characters long.</div>
-        <input type="submit" class="cta-btn filled" value="add event" [disabled]="!eventForm.valid">
+        <input type="submit" class="cta-btn filled" value="Add event" [disabled]="!eventForm.valid">
       </div>
   </form>
 </div>
