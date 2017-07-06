@@ -1,0 +1,30 @@
+
+<div class="body-blur">
+  <div class="row columns">
+    <h1>Add an Event</h1>
+  </div>
+
+  <form [formGroup]="eventForm" (ngSubmit)="addEvent(eventForm.value)">
+    <div class="row">
+      <div class="columns small-12 medium-6">
+        <label>Name of event
+          <input type="text" name="name" [formControl]="eventForm.controls['name']">
+        </label>
+        <div class="alert" *ngIf="!eventForm.controls['name'].valid && eventForm.controls['name'].touched">You must specify a name.</div>
+      </div>
+      <div class="columns small-12 medium-6">
+        <label>Date
+          <input type="text" name="date" [formControl]="eventForm.controls['date']">
+        </label>
+        <div class="alert" *ngIf="!eventForm.controls['date'].valid && eventForm.controls['date'].touched">You must specify a date.</div>
+      </div>
+    </div>
+      <div class="row columns">
+        <label>Details
+          <textarea name="details" id="details" [formControl]="eventForm.controls['details']"></textarea>
+        </label>
+        <div class="alert" *ngIf="!eventForm.controls['details'].valid && eventForm.controls['details'].touched">You must specify details that are at least 500 characters long.</div>
+        <input type="submit" class="cta-btn filled" value="add event" [disabled]="!eventForm.valid">
+      </div>
+  </form>
+</div>
