@@ -10,6 +10,7 @@ import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { DetailsComponent } from './details/details.component';
 import { EventComponent } from './event/event.component';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EventComponent } from './event/event.component';
     NavComponent,
     HomeComponent,
     DetailsComponent,
-    EventComponent
+    EventComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
