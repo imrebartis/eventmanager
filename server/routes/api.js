@@ -45,7 +45,7 @@ router.post('/events', function(req, res) {
     newEvent.location = req.body.location;
     newEvent.details = req.body.details;
     newEvent.date = req.body.date;
-    newPost.save(function(err, addedEvent) {
+    newEvent.save(function(err, addedEvent) {
         if (err) {
             console.log('Error inserting the event');
         } else {

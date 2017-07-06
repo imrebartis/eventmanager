@@ -17,10 +17,10 @@ export class EventComponent implements OnInit {
   constructor(private _eventService: EventService, fb: FormBuilder, private router: Router) {
 
     this.eventForm = fb.group({
-     'name' : [null, Validators.compose([Validators.required, Validators.minLength(1), Validators.maxLength(75)])],
+     'name' : [null, Validators.required],
      'date' : [null, Validators.required],
-     'details' : [null, Validators.compose([Validators.required, Validators.minLength(30), Validators.maxLength(500)])],
-     'location' : [null, Validators.compose([Validators.required, Validators.minLength(1), Validators.maxLength(75)])]
+     'details' : [null, Validators.required],
+     'location' : [null, Validators.required]
    });
 
    }
