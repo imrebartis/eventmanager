@@ -16,7 +16,7 @@
         <label>Date (yy-mm-dd)
           <input type="text" name="date" [formControl]="eventForm.controls['date']">
         </label>
-        <div class="alert" *ngIf="!eventForm.controls['date'].valid && eventForm.controls['date'].touched">You must specify a date (yy-mm-dd).</div>
+        <div class="alert" *ngIf="!eventForm.controls['date'].valid && eventForm.controls['date'].touched">You must specify a date (format: yy-mm-dd).</div>
       </div>
     </div>
       <div class="columns">
@@ -24,9 +24,6 @@
           <textarea name="details" id="details" [formControl]="eventForm.controls['details']"></textarea>
         </label>
         <div class="alert" *ngIf="!eventForm.controls['details'].valid && eventForm.controls['details'].touched">You must specify details that are at least 10 characters long.</div>
-        <input type="submit" class="cta-btn filled" value="Add event" [disabled]="!eventForm.valid">
-      </div>
-      <div class="columns">
         <label>Location
           <textarea name="location" id="location" [formControl]="eventForm.controls['location']"></textarea>
         </label>
