@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { DetailsComponent } from './details/details.component';
 import { EventComponent } from './event/event.component';
 import { SearchPipe } from './search.pipe';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SearchPipe } from './search.pipe';
     HomeComponent,
     DetailsComponent,
     EventComponent,
-    SearchPipe
+    SearchPipe,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
