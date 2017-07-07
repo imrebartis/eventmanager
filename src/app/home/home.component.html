@@ -2,7 +2,7 @@
     <h1 class="list-title center-title">EVENTS LIST</h1>
 </div>
 
-<div class="search" id="search-location"><label>Search by location
+<div class="search" id="searchlocation"><label>Search by location
   <input [(ngModel)]="query">
   <div id="listed-locations" *ngFor="let event of events | search:'id,location':query" routerLink="/details/{{ event._id }}">{{event.name}}</div>
  </label>
