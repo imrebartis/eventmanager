@@ -1,0 +1,63 @@
+html {
+color: black;
+}
+
+#login-panel {
+  margin-top: 40px;
+}
+
+.container-home-custom{
+  padding: 0px;
+  border-radius: 0px;
+}
+
+#top-div {
+  margin-bottom: 0;
+  height: 85vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  border-radius: 0px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.back-black {
+background-color: #3B3B3B;
+color: gray;
+font-size: 10px;
+}
+
+a {
+  display: block;
+  float: right;
+  margin-top: .6rem;
+}
+
+.footer-ul li a {
+  display: block;
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 1000px) {
+
+#login-panel {
+  position: absolute;
+  margin: 40px 180px;
+  min-width: 220px;
+
+}
+}
+
+@media (max-width: 450px) {
+
+#login-panel {
+  position: absolute;
+  margin: 40px 80px;
+  min-width: 220px;
+
+}
+}
